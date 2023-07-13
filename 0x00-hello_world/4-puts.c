@@ -1,8 +1,9 @@
 #include <stdio.h>
 
-/*
- * program to print hello with
- * puts function
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (success)
  */
 int main(void)
 {
