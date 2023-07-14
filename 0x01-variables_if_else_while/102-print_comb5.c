@@ -10,28 +10,20 @@ int main(void)
 	/* program to print all combination of 2 digits*/
 	int first;
 	int second;
-	int third;
-	int fourth;
 
-	for (first = 48; first <= 57; first++)
+	for (first = 0; first <= 98; first++)
 	{
-		for (second = 48; second <= 57; second++)
+		for (second = first + 1; second <= 99; second++)
 		{
-			for (third = 48; third <= 57; third++)
+			putchar((first / 10) + '0');
+			putchar((first % 10) + '0');
+			putchar(' ');
+			putchar((second / 10) + '0');
+			putchar((second % 10) + '0');
+			if (first != 98 || second != 99)
 			{
-				for (fourth = 48; fourth <= 57; fourth++)
-				{
-					putchar(first);
-					putchar(second);
-					putchar(' ');
-					putchar(third);
-					putchar(fourth);
-					if (first != 57 || second != 57 || third != 57 || fourth != 57)
-					{
-						putchar(',');
-						putchar(' ');
-					}
-				}
+				putchar(',');
+				putchar(' ');
 			}
 		}
 	}
