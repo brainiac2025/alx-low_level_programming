@@ -1,19 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-
-void print_alphabet_x10(void);
-
-/**
- * main -Entry point
- *
- * Return: Always 0(success)
- */
-int main(void)
-{
-	print_alphabet_x10();
-	return (0);
-}
-
+#include "main.h"
 /**
  * print_alphabet_x10 - Printing lower alphabet from a to z
  * 10 times
@@ -28,8 +13,8 @@ void print_alphabet_x10(void)
 	{
 		for (i = 97; i <= 122; i++)
 		{
-			putchar(i);
+			_putchar(i);
 		}
-		putchar('\n');
+		_putchar('\n');
 	}
 }
