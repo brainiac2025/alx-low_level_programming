@@ -26,7 +26,10 @@ void times_table(void)
 				_putchar((mult / 10) + '0');
 				_putchar((mult % 10) + '0');
 				if (end != 9)
+				{
 					_putchar(',');
+					_putchar(' ');
+				}
 			}
 			}
 		_putchar('\n');
