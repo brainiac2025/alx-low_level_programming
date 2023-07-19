@@ -8,9 +8,9 @@
  */
 int main(void)
 {
-	long int a;
-	long int b;
-	long int c;
+	int a;
+	int b;
+	int c;
 	int count;
 
 	a = 1;
@@ -18,12 +18,12 @@ int main(void)
 	count = 1;
 	while (count <= 100)
 	{
-		printf("%ld", b);
+		printf("%d", b);
 		c = a + b;
 		a = b;
 		b = c;
 		count++;
-		if (count <= 100)
+		if (count != 100)
 		{
 			printf(", ");
 		}
