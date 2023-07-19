@@ -21,32 +21,25 @@ void print_times_table(int n)
                                 if (mult < 10)
                                 {
                                         _putchar(mult + '0');
+					_putchar(' ');
+					_putchar(' ');
                                 }
-				else if (mult > 99)
+				else if (mult < 100)
 				{
-					_putchar((mult / 100) + '0');
-					_putchar(((mult / 10) % 10) + '0');
+					_putchar((mult / 10) + '0');
 					_putchar((mult % 10) + '0');
+					_putchar(' ');
 				}
                                 else
                                 {
-                                        _putchar((mult / 10) + '0');
-                                        _putchar((mult % 10) + '0');
+                                        _putchar((mult / 100) + '0');
+                                        _putchar(((mult / 10) % 10) + '0');
+					_putchar((mult % 10) + '0');
                                 }
-                                if (start <= n && inner < n )
+                                if (inner < n )
                                 {
                                         _putchar(',');
-					if (mult >=0 && mult <= 9)
-					{
-						_putchar(' ');
-						_putchar(' ');
-						_putchar(' ');
-					}
-					else if (mult >= 10 && mult <= 99)
-					{
-						_putchar(' ');
-						_putchar(' ');
-					}
+					_putchar(' ');
                                 }
                         }
                         _putchar('\n');
