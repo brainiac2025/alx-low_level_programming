@@ -11,23 +11,21 @@ int main(void)
 	int a;
 	int b;
 	int c;
-	int count;
+	int sum;
 
 	a = 1;
 	b = 1;
-	count = 1;
-	while (count <= 100)
+	sum = 0;
+	while (b <= 4000000)
 	{
-		printf("%d", b);
+		if (b % 2 == 0)
+		{
+			sum = sum + b;
+		}
 		c = a + b;
 		a = b;
 		b = c;
-		count++;
-		if (count != 100)
-		{
-			printf(", ");
-		}
 	}
-	printf("\n");
+	printf("%d\n", sum);
 	return (0);
 }
