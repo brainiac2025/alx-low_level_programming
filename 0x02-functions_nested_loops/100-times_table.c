@@ -36,7 +36,6 @@ void print_times_table(int n)
                                 if (start <= n && inner < n )
                                 {
                                         _putchar(',');
-                                        _putchar(' ');
 					if (mult >=0 && mult <= 9)
 					{
 						_putchar(' ');
