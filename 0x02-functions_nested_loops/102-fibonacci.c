@@ -16,14 +16,14 @@ int main(void)
 	a = 1;
 	b = 1;
 	count = 1;
-	while (count <= 100)
+	while (count <= 50)
 	{
 		printf("%ld", b);
 		c = a + b;
 		a = b;
 		b = c;
 		count++;
-		if (count <= 100)
+		if (count <= 50)
 		{
 			printf(", ");
 		}
