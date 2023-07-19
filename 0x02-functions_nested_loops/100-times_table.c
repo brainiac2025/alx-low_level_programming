@@ -37,12 +37,18 @@ void print_times_table(int n)
                                 {
                                         _putchar(',');
                                         _putchar(' ');
-					_putchar(' ');
-					_putchar(' ');
+					if (mult >=0 && mult <= 9)
+					{
+						_putchar(' ');
+						_putchar(' ');
+					}
+					else if (mult >= 10 && mult <= 99)
+					{
+						_putchar(' ');
+					}
                                 }
                         }
                         _putchar('\n');
 		}
 	}
 }
-
