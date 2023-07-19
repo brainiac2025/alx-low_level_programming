@@ -8,20 +8,25 @@
  */
 int main(void)
 {
-	int a;
-	int b;
-	int c;
+	long int a;
+	long int b;
+	long int c;
+	int count;
 
 	a = 1;
 	b = 2;
-	while (a <= 100)
+	count = 1;
+	while (count <= 100)
 	{
-		printf("%d", a);
+		printf("%ld", a);
 		c = a + b;
 		a = b;
 		b = c;
-		if (a <= 100)
+		count++;
+		if (count <= 100)
+		{
 			printf(", ");
+		}
 	}
 	printf("\n");
 	return (0);
