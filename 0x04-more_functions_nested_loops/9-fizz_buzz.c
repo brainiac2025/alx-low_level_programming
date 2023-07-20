@@ -24,7 +24,7 @@ void fizz_buzz(void)
 		else
 			printf("%d ", num);
 	}
-	printf("\n");
+	printf("Buzz\n");
 }
 /**
  * main - Entry point
