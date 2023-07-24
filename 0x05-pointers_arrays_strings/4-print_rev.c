@@ -23,7 +23,7 @@ void print_rev(char *s)
 	s -= count;
 	/* loop through using the length then print array index of each*/
 
-	while (count >= 0)
+	while (count > 0)
 	{
 		count--;
 		_putchar(s[count]);
