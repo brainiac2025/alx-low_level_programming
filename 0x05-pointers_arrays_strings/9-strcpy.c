@@ -7,8 +7,6 @@
  */
 char *_strcpy(char *dest, char *src)
 {
-	if (dest == NULL || src == NULL)
-		return (NULL);
 	int index;
 
 	index = 0;
