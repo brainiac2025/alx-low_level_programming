@@ -8,7 +8,7 @@
 char *_strcpy(char *dest, char *src)
 {
 	int index;
-	int *newDest;
+	char *newDest;
 	
 	*newDest = dest;
 	index = 0;
@@ -19,5 +19,5 @@ char *_strcpy(char *dest, char *src)
 		index++;
 	}
 	*dest = '\0';
-	return (dest);
+	return (newDest);
 }
