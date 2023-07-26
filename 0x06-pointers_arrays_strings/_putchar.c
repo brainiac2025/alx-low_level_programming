@@ -2,7 +2,7 @@
 
 /**
  * _putchar - print function
- *
+ *@c: parameter
  * Return: output
  */
 int _putchar(char c)
