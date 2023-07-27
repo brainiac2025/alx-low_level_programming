@@ -6,20 +6,26 @@
  */
 char *cap_string(char *str)
 {
-	int index;
+	int index, first;
 
 	index = 0;
+	first = 1;
 	while (str[index] != '\0')
 	{
-		if (str[index] >= 97 && str[index] <= 122)
+		if (first && str[index] >= 'a' && str[index] <= 'z')
 		{
 			str[index] -= 32;
-			index++;
+			first = 0;
 		}
-		else if (str[index] >= 
+		else if ((str[index] == ' ' || str[index] == '\t' ||
+str[index] == '\n' || str[index] == ',' || str[index] == ';' ||
+str[index] == '.' || str[index] == '!' || str[index] == '?' ||
+str[index] == '"' || str[index] == '(' || str[index] == ')' ||
+str[index] == '}' || str[index] == '}'))
 		{
-			index++;
+			first = 1;
 		}
+		index++;
 	}
 	return (str);
 }
