@@ -15,18 +15,16 @@ char *leet(char *str)
 	index = 0;
 	while (str[index] != '\0')
 	{
-		if (str[index] == 65 || str[index] == 97)
+		if (str[index] == 'a' || str[index] == 'A')
 			str[index] = 52;
-		else if (str[index] == 69 || str[index] == 101)
+		else if (str[index] == 'e' || str[index] == 'E')
 			str[index] = 51;
-		else if (str[index] == 79 || str[index] == 111)
+		else if (str[index] == 'o' || str[index] == 'O')
 			str[index] = 48;
-		else if (str[index] == 84 || str[index] == 116)
+		else if (str[index] == 't' || str[index] == 'T')
 			str[index] = 55;
-		else if (str[index] == 76 || str[index] == 108)
+		else if (str[index] == 'l' || str[index] == 'L')
 			str[index] = 49;
-		else if (str[index] == 83 || str[index] == 115)
-			str[index] = 53;
 		index++;
 	}
 	return (str);
