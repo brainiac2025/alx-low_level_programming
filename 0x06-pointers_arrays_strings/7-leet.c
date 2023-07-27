@@ -10,21 +10,22 @@
  */
 char *leet(char *str)
 {
-	int index;
+	int index, index2;
+	char condition[] = "AEOTLaeotl";
+	char replacement[] = "4307143071";
 
 	index = 0;
 	while (str[index] != '\0')
 	{
-		if (str[index] == 'a' || str[index] == 'A')
-			str[index] = 52;
-		if (str[index] == 'e' || str[index] == 'E')
-			str[index] = 51;
-		if (str[index] == 'o' || str[index] == 'O')
-			str[index] = 48;
-		if (str[index] == 't' || str[index] == 'T')
-			str[index] = 55;
-		if (str[index] == 'l' || str[index] == 'L')
-			str[index] = 49;
+		index2 = 0;
+		while (index2 < 10)
+		{
+			if (str[index] == condition[index2])
+			{
+				str[index] = replacement[index2];
+			}
+			index2++;
+		}
 		index++;
 	}
 	return (str);
