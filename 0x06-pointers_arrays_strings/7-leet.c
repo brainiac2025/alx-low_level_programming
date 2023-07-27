@@ -25,6 +25,8 @@ char *leet(char *str)
 			str[index] = 55;
 		else if (str[index] == 76 || str[index] == 108)
 			str[index] = 49;
+		else if (str[index] == 83 || str[index] == 115)
+			str[index] = 53;
 		index++;
 	}
 	return (str);
