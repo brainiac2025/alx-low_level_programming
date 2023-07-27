@@ -17,13 +17,13 @@ char *leet(char *str)
 	{
 		if (str[index] == 'a' || str[index] == 'A')
 			str[index] = 52;
-		else if (str[index] == 'e' || str[index] == 'E')
+		if (str[index] == 'e' || str[index] == 'E')
 			str[index] = 51;
-		else if (str[index] == 'o' || str[index] == 'O')
+		if (str[index] == 'o' || str[index] == 'O')
 			str[index] = 48;
-		else if (str[index] == 't' || str[index] == 'T')
+		if (str[index] == 't' || str[index] == 'T')
 			str[index] = 55;
-		else if (str[index] == 'l' || str[index] == 'L')
+		if (str[index] == 'l' || str[index] == 'L')
 			str[index] = 49;
 		index++;
 	}
