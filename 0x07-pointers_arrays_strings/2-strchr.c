@@ -12,8 +12,8 @@ char *_strchr(char *s, char c)
 	while (s[index] != '\0')
 	{
 		if (s[index] == c)
-			return (s + index);
+			return (&s[index]);
 		index++;
 	}
-	return (s + index);
+	return (0);
 }
