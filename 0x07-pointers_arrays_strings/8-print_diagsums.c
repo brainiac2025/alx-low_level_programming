@@ -15,8 +15,8 @@ void print_diagsums(int *a, int size)
 	i = 0;
 	while (i < size)
 	{
-		firstdiag += a[i * size + 1];
-		secondiag += a[i * size + (size - 1 - i)];
+		firstdiag += a[i * size + i];
+		secondiag += a[(i + 1) * size - (i + 1)];
 		i++;
 	}
 	printf("%ld, %ld\n", firstdiag, secondiag);
