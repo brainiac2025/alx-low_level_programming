@@ -1,4 +1,4 @@
-int sqrt_help(int n, int low, int high);
+long sqrt_help(long n, long low, long high);
 /**
  * _sqrt_recursion - function to calculate sqrt of n
  * @n: the number
@@ -20,9 +20,9 @@ int _sqrt_recursion(int n)
  * @high: highest number
  * Return: sqrt
  */
-int sqrt_help(int n, int low, int high)
+long sqrt_help(long n, long low, long high)
 {
-	int mid, square;
+	long mid, square;
 
 
 	if (low > high)
