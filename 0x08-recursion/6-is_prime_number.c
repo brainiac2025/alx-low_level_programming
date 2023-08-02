@@ -1,4 +1,4 @@
-int _is_prime_help(int n, int i);
+int is_prime_help(int n, int i);
 /**
  * is_prime_number - function to check for prime number
  * @n: the number to check
@@ -14,7 +14,7 @@ int is_prime_number(int n)
 }
 
 /**
- * is_prime_help  function to help with the prime
+ * is_prime_help - function to help with the prime
  * @n: number pass
  * @i: iterator
  * Return: recursive
