@@ -1,7 +1,7 @@
 int len(char *s);
 int compare_string(char *s, int start, int end);
 /**
- * is_palidrome - function to check if string is palidrome
+ * is_palindrome - function to check if string is palidrome
  * @s: the string
  * Return: 1 for success and 0 otherwise
  */
