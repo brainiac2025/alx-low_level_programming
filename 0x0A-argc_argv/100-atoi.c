@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "main.h"
 /**
  * ischeck- function to check for digit
@@ -55,27 +54,4 @@ int _atoi(char *s)
 		}
 	}
 	return (output * sign);
-}
-
-/**
- * main - function to multiply argument pass
- * @argc: number of argument
- * @argv: array of argument
- * Return: Always 0 (success)
- */
-int main(int argc, char *argv[])
-{
-	int first, second;
-	int mult;
-
-	if (argc < 3)
-	{
-		printf("Error\n");
-		return (1);
-	}
-	first = _atoi(argv[1]);
-	second = _atoi(argv[2]);
-	mult = first * second;
-	printf("%d\n", mult);
-	return (0);
 }
