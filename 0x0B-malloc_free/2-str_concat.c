@@ -36,9 +36,9 @@ char *str_concat(char *s1, char *s2)
 	count = 0;
 	index = 0;
 
-	if (!s1)
+	if (s1 == NULL)
 		s1 = "";
-	if (!s2)
+	if (s2 == NULL)
 		s2 = "";
 
 	newStr = (char *)malloc((len1 + len2 + 1) * sizeof(char));
