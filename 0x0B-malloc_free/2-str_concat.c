@@ -35,6 +35,12 @@ char *str_concat(char *s1, char *s2)
 	len2 = len(s2);
 	count = 0;
 	index = 0;
+
+	if (!s1)
+		s1 = "";
+	if (!s2)
+		s2 = "";
+
 	newStr = (char *)malloc((len1 + len2 + 1) * sizeof(char));
 
 	if (!newStr)
