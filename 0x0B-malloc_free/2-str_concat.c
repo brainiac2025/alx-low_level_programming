@@ -8,13 +8,12 @@
  */
 int len(char *str)
 {
-	int index, len;
+	int len;
 
-	index = 0;
-	while (str[index] != '\0')
+	len = 0;
+	while (str != NULL && str[len] != '\0')
 	{
 		len++;
-		index++;
 	}
 	return (len);
 }
@@ -35,23 +34,17 @@ char *str_concat(char *s1, char *s2)
 	len2 = len(s2);
 	count = 0;
 	index = 0;
-
-	if (s1 == NULL)
-		s1 = "";
-	if (s2 == NULL)
-		s2 = "";
-
 	newStr = (char *)malloc((len1 + len2 + 1) * sizeof(char));
 
 	if (!newStr)
 		return ('\0');
 
-	while (s1[index] != '\0')
+	while (s1 != NULL && s1[index] != '\0')
 	{
 		newStr[index] = s1[index];
 		index++;
 	}
-	while (s2[count] != '\0')
+	while (s2 != NULL && s2[count] != '\0')
 	{
 		newStr[index] = s2[count];
 		count++;
