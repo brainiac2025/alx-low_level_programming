@@ -102,9 +102,6 @@ char **strtow(char *str)
 	length = len(str);
 	wordlen = wordl(str);
 
-	if (wordlen == 0)
-		return (NULL);
-
 	newStr = malloc(sizeof(char *) * wordlen);
 	if (newStr == NULL)
 	{
