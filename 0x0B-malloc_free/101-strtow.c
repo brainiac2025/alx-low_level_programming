@@ -48,24 +48,32 @@ int wordl(char *str)
  */
 char **split(char *str, int wordlen, int length, char **newStr)
 {
-	int i, j, index, numlen, wordstart;
+	int i, j, index, numlen, wordstart, nextedspace;
 
 	index = 0;
+	nextedspace = 1;
 	for (i = 0; i < wordlen; i++)
 	{
 		numlen = 0;
+		nextedspace = 1;
 		while ((index < length) && (str[index] == ' '))
 		{
 			index++;
+			nextedspace = 1;
 		}
 
 		wordstart = index;
 
 		while ((index < length) && (str[index] != ' '))
 		{
+			nextedspace = 0;
 			index++;
 			numlen++;
 		}
+
+		if (nextedspace)
+			continue;
+
 		newStr[i] = malloc(sizeof(char) * (numlen + 1));
 
 		if (newStr[i] == NULL)
