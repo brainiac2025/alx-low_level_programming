@@ -99,10 +99,12 @@ char **strtow(char *str)
 	int wordlen, length;
 	char **newStr;
 
-	if (str == NULL || *str == '\0')
-		return (NULL);
 	length = len(str);
 	wordlen = wordl(str);
+
+	if (worlen == 0)
+		return (NULL);
+
 	newStr = malloc(sizeof(char *) * wordlen);
 	if (newStr == NULL)
 	{
