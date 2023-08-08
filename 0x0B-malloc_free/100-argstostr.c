@@ -5,6 +5,7 @@
  * argstostr - function to concatenate argument and print them
  * @ac: number of argument
  * @av: argument pass
+ * Return: the concatenate string
  */
 char *argstostr(int ac, char **av)
 {
@@ -21,7 +22,7 @@ char *argstostr(int ac, char **av)
 		{
 			len++;
 		}
-		total_len += len + 1;
+		total_len += len;
 	}
 
 	newArray = malloc(sizeof(char) * total_len);
