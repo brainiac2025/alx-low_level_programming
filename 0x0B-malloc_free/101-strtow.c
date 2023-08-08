@@ -2,6 +2,26 @@
 #include <stdlib.h>
 
 /**
+ * space - check for space
+ * @str: the string
+ * Return: if contain space
+ */
+int space(char *str)
+{
+	int is_space, i;
+
+	is_space = 1;
+	for (i = 0; str[i] != '\0'; i++)
+	{
+		if (str[i] != ' ')
+		{
+			is_space = 0;
+			break;
+		}
+	}
+	return (is_space);
+}
+/**
  * len - get the length of the array
  * @str: the string
  * Return: the length of the string
@@ -101,6 +121,9 @@ char **strtow(char *str)
 
 	length = len(str);
 	wordlen = wordl(str);
+
+	if (space(str))
+		return (NULL);
 
 	newStr = malloc(sizeof(char *) * wordlen);
 	if (newStr == NULL)
