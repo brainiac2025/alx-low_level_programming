@@ -60,6 +60,7 @@ int wordl(char *str)
 			}
 		}
 	}
+	wordlen++;
 	return (wordlen);
 }
 /**
