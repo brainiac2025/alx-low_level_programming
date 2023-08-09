@@ -25,7 +25,7 @@ char *argstostr(int ac, char **av)
 		total_len += len;
 	}
 
-	newArray = malloc(sizeof(char) * total_len);
+	newArray = malloc((sizeof(char) * total_len) + ac + 1);
 
 	j = 0;
 	for (i = 0; i < ac; i++)
