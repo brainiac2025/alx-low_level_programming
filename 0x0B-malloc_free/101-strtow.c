@@ -47,7 +47,7 @@ int wordl(char *str)
 {
 	int length, wordlen, i;
 
-	wordlen = 0;
+	wordlen = 1;
 	length = len(str);
 
 	for (i = 0; i <= length; i++)
