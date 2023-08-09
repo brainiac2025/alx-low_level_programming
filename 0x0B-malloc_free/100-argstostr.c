@@ -12,6 +12,8 @@ char *argstostr(int ac, char **av)
 	int len, total_len, i, j;
 	char *newArray;
 
+	total_len = 0;
+
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
