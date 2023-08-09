@@ -50,14 +50,11 @@ int wordl(char *str)
 	wordlen = 0;
 	length = len(str);
 
-	for (i = 0; i < length; i++)
+	for (i = 0; i <= length; i++)
 	{
 		if (str[i] == ' ')
 		{
-			if (i == 0 || str[i - 1] != ' ')
-			{
-				wordlen++;
-			}
+			wordlen++;
 		}
 	}
 	wordlen++;
