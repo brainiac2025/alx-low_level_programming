@@ -53,9 +53,13 @@ int wordl(char *str)
 	for (i = 0; i < length; i++)
 	{
 		if (str[i] == ' ')
-			wordlen++;
+		{
+			if (i == 0 || str[i - 1] != ' ')
+			{
+				wordlen++;
+			}
+		}
 	}
-	wordlen++;
 	return (wordlen);
 }
 /**
