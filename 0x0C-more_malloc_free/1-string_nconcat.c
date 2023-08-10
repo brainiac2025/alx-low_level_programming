@@ -49,6 +49,20 @@ void n_less(unsigned int s1_len, char *s1, char *s2, char *newString, unsigned
 }
 
 /**
+ * fail - function to check if fail
+ * @str: pointer to check
+ * Return: NULL
+ */
+char *fail(char *str)
+{
+	if (str == NULL)
+	{
+		return (NULL);
+	}
+	return (str);
+}
+
+/**
  * string_nconcat - function to concatenate string
  * @s1: destination
  * @s2: source
@@ -73,13 +87,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		index = 0;
 		newString = malloc(s1_len + n + 1);
-
+		fail(newString);
 		n_less(s1_len, s1, s2, newString, n, index);
 	}
 	else
 	{
 		index = 0;
 		newString = malloc(s1_len + s2_len + 1);
+		fail(newString);
 
 		for (i = 0; i < s1_len; i++)
 		{
