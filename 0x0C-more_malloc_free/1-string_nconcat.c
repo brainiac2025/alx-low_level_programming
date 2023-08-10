@@ -74,14 +74,14 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int s1_len, s2_len, index, i;
 	char *newString;
 
-	s1_len = 0;
-	s2_len = 0;
+	s1_len = str_len(s1);
+	s2_len = str_len(s2);
 
-	if (s1 != NULL)
-		s1_len = str_len(s1);
+	if (s1 == NULL)
+		s1 = "";
 
-	if (s2 != NULL)
-		s2_len = str_len(s2);
+	if (s2 == NULL)
+		s2 = "";
 
 	if (n < s2_len)
 	{
