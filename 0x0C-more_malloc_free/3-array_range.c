@@ -22,7 +22,7 @@ void *array_range(int min, int max)
 
 	for (i = min; i <= max; i++)
 	{
-		*((int *)(memory + i)) = i;
+		*((int *)(memory + (i - min))) = i;
 	}
 	return (memory);
 }
