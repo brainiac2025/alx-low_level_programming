@@ -4,7 +4,7 @@
 
 /**
  * free_dog - function to free dog
- * @d: d of struct 
+ * @d: d of struct
  * Return: void
  */
 void free_dog(dog_t *d)
