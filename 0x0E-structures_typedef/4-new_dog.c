@@ -27,17 +27,14 @@ int len(char *str)
  */
 char *copy(char *source, char *dest)
 {
-	char *origin_dest;
+	int i;
 
-	origin_dest = dest;
-	while (*source != '\0')
+	for (i = 0; source[i] != '\0'; i++)
 	{
-		*dest = *source;
-		source++;
-		dest++;
+		dest[i] = source[i];
 	}
-	*dest = '\0';
-	return (origin_dest);
+	dest[i] = '\0';
+	return (dest);
 }
 
 /**
