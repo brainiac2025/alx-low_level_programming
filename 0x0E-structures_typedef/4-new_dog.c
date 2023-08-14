@@ -23,10 +23,13 @@ int len(char *str)
  * copy - function to copy the character
  * @source: source to copy from
  * @dest: where to copy to
- * Return: void
+ * Return: the destination
  */
-void copy(char *source, char *dest)
+char *copy(char *source, char *dest)
 {
+	char *origin_dest;
+
+	origin_dest = dest;
 	while (*source != '\0')
 	{
 		*dest = *source;
@@ -34,6 +37,7 @@ void copy(char *source, char *dest)
 		dest++;
 	}
 	*dest = '\0';
+	return (origin_dest);
 }
 
 /**
@@ -46,19 +50,25 @@ void copy(char *source, char *dest)
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *new_d = (dog_t *)malloc(sizeof(dog_t));
+	int name_len, owner_len;
+	dog_t *new_d;
+
+	name_len = len(name);
+	owner_len = len(name);
+	new_d = (dog_t *)malloc(sizeof(dog_t));
 
 	if (new_d == NULL)
 		return (NULL);
-	new_d->name = (char *)malloc(sizeof(len(name) + 1));
+	new_d->name = (char *)malloc(sizeof(name_len + 1));
+	new_d->owner = (char *)malloc(sizeof(owner_len + 1));
 
-	if (new_d->name == NULL)
+	if (new_d->name == NULL || new_d->owner == NULL)
+	{
+		free(new_d->name);
+		free(new_d->owner);
+		free(new_d);
 		return (NULL);
-
-	new_d->owner = (char *)malloc(sizeof(len(owner) + 1));
-
-	if (new_d->owner == NULL)
-		return (NULL);
+	}
 
 	copy(name, new_d->name);
 	copy(owner, new_d->owner);
