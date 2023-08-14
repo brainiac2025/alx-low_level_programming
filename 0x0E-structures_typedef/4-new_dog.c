@@ -27,9 +27,11 @@ int len(char *str)
  */
 char *copy(char *source, char *dest)
 {
-	int i;
+	int i, source_len;
 
-	for (i = 0; source[i] != '\0'; i++)
+	source_len = len(source);
+
+	for (i = 0; i < source_len; i++)
 	{
 		dest[i] = source[i];
 	}
@@ -59,7 +61,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 	new_d->name = malloc(sizeof(char) * (name_len + 1));
 	if (new_d->name == NULL)
 	{
-		free(new_d->name);
 		free(new_d);
 		return (NULL);
 	}
@@ -69,7 +70,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (new_d->owner == NULL)
 	{
 		free(new_d->name);
-		free(new_d->owner);
 		free(new_d);
 		return (NULL);
 	}
