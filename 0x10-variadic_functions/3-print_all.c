@@ -21,7 +21,7 @@ void print_all(const char * const format, ...)
 			switch (format[i])
 			{
 				case 'c':
-					printf("%c", va_arg(argument, int));
+					printf("%s%c", sep, va_arg(argument, int));
 					break;
 				case 'i':
 					printf("%s%d", sep, va_arg(argument, int));
@@ -40,7 +40,7 @@ void print_all(const char * const format, ...)
 					continue;
 			}
 		i++;
-		sep = ",";
+		sep = ", ";
 		}
 	printf("\n");
 	va_end(argument);
