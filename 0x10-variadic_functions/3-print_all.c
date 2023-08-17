@@ -9,11 +9,10 @@
  */
 void print_all(const char * const format, ...)
 {
-	int integer, i = 0;
-	char character, mychar;
-	float _float;
+	int i = 0;
 	char *string, *sep = "";
 	va_list argument;
+	char character;
 
 	va_start(argument, format);
 	while ((character =  format[i]) != '\0')
@@ -21,23 +20,23 @@ void print_all(const char * const format, ...)
 		switch (character)
 		{
 			case 'c':
-				mychar = va_arg(argument, int);
-				printf("%c", mychar);
+				printf("%c", va_arg(argument, int));
 				break;
 			case 'i':
-				integer = va_arg(argument, int);
-				printf("%s%d", sep, integer);
+				printf("%s%d", sep, va_arg(argument, int));
 				break;
 			case 'f':
-				_float = va_arg(argument, double);
-				printf("%s%f", sep, _float);
+				printf("%s%f", sep, va_arg(argument, double));
 				break;
 			case 's':
-				string = va_arg(argument, char *);
+				string = va_arg(argument, char*);
 				if (string == NULL)
 					string = "(nil)";
 				printf("%s%s", sep, string);
 				break;
+			default:
+				i++;
+				continue;
 		}
 		i++;
 		sep = ",";
