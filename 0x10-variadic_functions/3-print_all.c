@@ -12,14 +12,13 @@ void print_all(const char * const format, ...)
 	int i = 0;
 	char *string, *sep = "";
 	va_list argument;
-	char character;
 
 	va_start(argument, format);
 	if (format)
 	{
-		while ((character =  format[i]) != '\0')
+		while (format[i])
 		{
-			switch (character)
+			switch (format[i])
 			{
 				case 'c':
 					printf("%c", va_arg(argument, int));
