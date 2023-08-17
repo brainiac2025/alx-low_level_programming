@@ -10,9 +10,8 @@
  */
 int main(int argc, char *argv[])
 {
-	int first, second, result;
+	int first, second;
 	char *op;
-	int (*mycalc)(int, int);
 
 	if (argc != 4)
 	{
@@ -24,21 +23,18 @@ int main(int argc, char *argv[])
 	op = argv[2];
 	second = atoi(argv[3]);
 
-	mycalc = get_op_func(op);
 
 	if ((*op == '/' || *op == '%') && (second == 0))
 	{
 		printf("Error\n");
 		exit(100);
 	}
-	if (*op != '+' && *op != '-' && *op != '/' && *op != '*' && *op != '%')
+	if (get_op_func(op) == NULL || op[1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
 	}
 
-	result = mycalc(first, second);
-
-	printf("%d\n", result);
+	printf("%d\n", get_op_func(op)(first, second));
 	return (0);
 }
