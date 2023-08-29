@@ -7,7 +7,7 @@
  */
 listint_t *createNode(int data)
 {
-	listint_t *newnode = malloc(sizeof(listint_t *));
+	listint_t *newnode = malloc(sizeof(listint_t));
 
 	if (newnode == NULL)
 		return (NULL);
