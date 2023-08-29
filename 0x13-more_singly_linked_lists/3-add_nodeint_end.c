@@ -19,16 +19,31 @@ listint_t *createNode(int data)
 }
 
 /**
- * add_nodeint - function to add node at the begining
+ * add_nodeint_end - function to add node at the begining
  * @head: the node
  * @n: the data
  * Return: pointer to the newly created node
  */
-listint_t *add_nodeint(listint_t **head, const int n)
+listint_t *add_nodeint_end(listint_t **head, const int n)
 {
 	listint_t *mynode = createNode(n);
 
-	mynode->next = *head;
-	*head = mynode;
+	if (mynode == NULL)
+		return (NULL);
+
+	if (*heag == NULL)
+	{
+		*head = mynode;
+	}
+	else
+	{
+		listint_t *currentNode = *head;
+
+		while (currentNode->next != NULL)
+		{
+			currentNode = currentNode->next;
+		}
+		currentNode->next = mynode;
+	}
 	return (mynode);
 }
