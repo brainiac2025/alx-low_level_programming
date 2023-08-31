@@ -1,11 +1,12 @@
+#include <stdio.h>
 #include <unistd.h>
 
 /**
- * putchar - function to write to console
+ * _putchar - function to write to console
  * @chr: the character
  * Return: the write function
  */
-int putchar(char chr)
+int _putchar(char chr)
 {
 	return (write(1, &chr, 1));
 }
