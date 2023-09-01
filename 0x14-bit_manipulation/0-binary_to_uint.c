@@ -32,7 +32,7 @@ unsigned int binary_to_uint(const char *b)
 		{
 			myDecimal += base;
 		}
-		if (b[binarylen] != '1' && b[binarylen] != '0')
+		if (b[binarylen] != '1' && b[binarylen] != '0'|| b == NULL)
 			return (0);
 		binarylen--;
 		base *= 2;
