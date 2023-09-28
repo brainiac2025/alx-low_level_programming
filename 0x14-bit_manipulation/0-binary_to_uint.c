@@ -23,22 +23,18 @@ unsigned int getlen(const char *chr)
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int myDecimal = 0;
-	unsigned int base = 1;
-	int binarylen = getlen(b) - 1;
+	int index;
 
 	if (!b)
 		return (0);
-	while (binarylen >= 0)
+
+	for (index = 0; b[index]; index++)
 	{
-		if (b[binarylen] == '1')
-		{
-			myDecimal += base;
-		}
-		if ((b[binarylen] != '1' && b[binarylen] != '0') || b == NULL)
+		if (b[index] < '0' || b[index] > '1')
 			return (0);
-		binarylen--;
-		base *= 2;
+		myDecimal = 2 * myDecimal + (b[index] - '0');
 	}
+
 	return (myDecimal);
 }
 
